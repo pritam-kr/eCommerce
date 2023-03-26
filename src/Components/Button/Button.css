@@ -1,0 +1,13 @@
+.qyt-btn-wrapper{
+    display: flex;
+    width: 100%;
+}
+.qyt{
+    width: 100%;
+    background-color: #a0a0a052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    font-size: 18px;
+}

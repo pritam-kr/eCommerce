@@ -4,18 +4,16 @@ import * as Icons from "react-icons/bi";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useProductContext } from "../../Context/ProductContext";
 import { ACTIONS } from "../../Context/action";
- 
 
 export const Nav = () => {
   const { pathname } = useLocation();
-  const { state , dispatch} = useProductContext();
+  const { state, dispatch } = useProductContext();
   const [seacrhValue, setSearchValue] = useState("");
   const navigate = useNavigate();
-  useEffect(()=>{
-      dispatch({type: ACTIONS.GET_SEARCH, payload: seacrhValue})
-  }, [seacrhValue])
+  useEffect(() => {
+    dispatch({ type: ACTIONS.GET_SEARCH, payload: seacrhValue });
+  }, [seacrhValue]);
 
- 
   return (
     <nav className="nav">
       <div className="wrapper nav-wrapper">
@@ -34,21 +32,17 @@ export const Nav = () => {
             onChange={(e) => setSearchValue(e.target.value)}
           />
 
-          {pathname === "/" ? (
-            <div className="cart-icon-wrapper">
-              <Icons.BiCartAlt
-                className="icons cart-icon"
-                onClick={() => navigate("/cart")}
-              />
-              {state.cart.length === 0 ? (
-                ""
-              ) : (
-                <p className="cart-qyt">{state.cart.length}</p>
-              )}
-            </div>
-          ) : (
-            ""
-          )}
+          <div className="cart-icon-wrapper">
+            <Icons.BiCartAlt
+              className="icons cart-icon"
+              onClick={() => navigate("/cart")}
+            />
+            {state.cart.length === 0 ? (
+              ""
+            ) : (
+              <p className="cart-qyt">{state.cart.length}</p>
+            )}
+          </div>
         </div>
       </div>
     </nav>

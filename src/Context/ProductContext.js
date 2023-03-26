@@ -1,17 +1,17 @@
 import axios from "axios";
 import { ACTIONS } from "./action";
 import { productsReducer } from "./Reducer";
- 
 
-const {
-  useEffect,
-  useContext,
-  createContext,
-  useReducer,
-} = require("react");
+const { useEffect, useContext, createContext, useReducer } = require("react");
 const productContext = createContext();
 
-const initialState = { products: [], loading: true, error: "" , cart:[], searchValue: ''};
+const initialState = {
+  products: [],
+  loading: true,
+  error: "",
+  cart: [],
+  searchValue: "",
+};
 
 export const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productsReducer, initialState);
@@ -27,7 +27,11 @@ export const ProductContextProvider = ({ children }) => {
       if (status === 200) {
         dispatch({
           type: ACTIONS.GET_PRODUCTS,
-          payload: { products: data, loading: false, error: "" },
+          payload: {
+            products: data.map((p) => ({ ...p, quantity: 1 })),
+            loading: false,
+            error: "",
+          },
         });
       }
     } catch (error) {

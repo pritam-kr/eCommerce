@@ -6,8 +6,7 @@ import { useProductContext } from "../../Context/ProductContext";
 import "./Product.css";
 
 const Product = () => {
-  const { state, dispatch } = useProductContext();
-  console.log(state);
+  const { state} = useProductContext();
 
   const getSearchedProduct = (seacrhValue, array) => {
     const copied = [...array];

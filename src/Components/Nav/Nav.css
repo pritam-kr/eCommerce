@@ -51,3 +51,12 @@
 .searchh_bar{
     padding: 10px 15px;
 }
+.cart-qyt{
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    padding: 5px;
+    top: -13px;
+    left: 20px;
+    color: #fff;
+}

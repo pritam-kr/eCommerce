@@ -1,0 +1,5 @@
+.single_product_wrapper{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 50% 50%;
+}
