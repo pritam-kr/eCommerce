@@ -6,7 +6,7 @@ import "./sp.css";
 
 const SingleProduct = () => {
   const urlStates = useParams();
-  const { state, dispatch } = useProductContext();
+  const { state } = useProductContext();
 
   const [currentProduct, setCurrentProduct] = useState({});
 
