@@ -1,0 +1,5 @@
+export const ACTIONS = {
+    GET_PRODUCTS: "GET_PRODUCTS",
+    GET_ERROR : "GET_ERROR",
+    GET_SEARCH : "GET_SEARCH",
+}

@@ -48,3 +48,6 @@
     background-color: brown;
     color: var(--primary-white);
 }
+.searchh_bar{
+    padding: 10px 15px;
+}
