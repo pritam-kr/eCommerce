@@ -7,3 +7,7 @@
 .icons{
   font-size: 2rem;
 }
+.main_container{
+  max-width: 900px;
+  margin: 2rem auto;
+}

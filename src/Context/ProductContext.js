@@ -10,7 +10,7 @@ const {
 } = require("react");
 const productContext = createContext();
 
-const initialState = { products: [], loading: true, error: "" };
+const initialState = { products: [], loading: true, error: "" , cart:[]};
 
 export const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(productsReducer, initialState);
