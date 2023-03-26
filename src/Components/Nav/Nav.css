@@ -1,0 +1,50 @@
+.nav{
+    box-shadow: var(--box-shadow);
+    padding: 2rem 0;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.site-title{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.left-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.cart-icon-wrapper{
+    position: relative;
+}
+
+.cart-qyt{
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    top: -.5rem;
+    font-size: .7rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: var(--primary-white);
+}
